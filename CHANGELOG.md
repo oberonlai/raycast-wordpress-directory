@@ -5,7 +5,7 @@
 - Support WordPress playgroud
 - Support pre-installed plugins by plugins' name
 - Add plugin author information
-- Change installing link into actions meun
+- Change installing link into actions meun and add shortcut
 - Fix InstaWP installing link
 
 ## [Added a new feature] - 2023-09-24

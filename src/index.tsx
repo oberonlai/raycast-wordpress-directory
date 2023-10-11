@@ -105,9 +105,9 @@ function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
         <ActionPanel>
           <ActionPanel.Section>
             <DefaultActions searchResult={searchResult} />
-				<Action.OpenInBrowser title={"Download version " + searchResult?.version} url={searchResult?.download || "#"} />
-				<Action.OpenInBrowser title="Install on TasteWP" url={`https://tastewp.com/new/?pre-installed-plugin-slug=${searchResult?.slug}&pre-installed-plugin-slug=woocommerce/`} />
-				<Action.OpenInBrowser title="Install on WP Playground" url={`https://playground.wordpress.net/?${devpendencyWoo}&plugin=${searchResult.slug}&login=1&url=/wp-admin//`} />
+				<Action.OpenInBrowser shortcut={{ modifiers: ["cmd"], key: "d" }} title={"Download version " + searchResult?.version} url={searchResult?.download || "#"} />
+				<Action.OpenInBrowser shortcut={{ modifiers: ["cmd"], key: "i" }} title="Install on WP Playground" url={`https://playground.wordpress.net/?${devpendencyWoo}&plugin=${searchResult.slug}&login=1&url=/wp-admin/`} />
+				<Action.OpenInBrowser shortcut={{ modifiers: ["cmd"], key: "t" }} title="Install on TasteWP" url={`https://tastewp.com/new/?pre-installed-plugin-slug=${searchResult?.slug}&pre-installed-plugin-slug=woocommerce/`} />
             {environment.canAccess(AI) && (
               <Action.Push
                 title="Translate Plugin Description in Tradtional Chinese"
